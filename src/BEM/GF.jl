@@ -7,7 +7,7 @@ struct DipSlip <: FaultType end
 # multi-threading
 
 function stress_greens_function(mesh::RectOkadaMesh, λ::T, μ::T;
-    ftype::FaultType=StrikeSlip(), fourier::Bool=true,
+    ftype::FaultType=DipSlip(), fourier::Bool=true,
     nrept::Integer=2, buffer_ratio::Real=0, fftw_flags::UInt32=FFTW.PATIENT
     ) where {T <: Real}
 
